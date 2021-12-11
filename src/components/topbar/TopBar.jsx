@@ -1,5 +1,5 @@
 import "./topbar.css";
-import logo from "../assets/images/Screensho.jpg"
+import logo from "../../assets/images/Screensho.jpg"
 
 export default function TopBar() {
     return(

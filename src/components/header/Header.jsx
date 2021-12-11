@@ -1,5 +1,5 @@
 import "./header.css"
-import logo from "../assets/images/Screensho.jpg"
+import logo from "../../assets/images/Screensho.jpg"
 
 export default function Header(){
     return(
@@ -10,7 +10,7 @@ export default function Header(){
             </div>
             <img
             className="headerImg"
-            src={logo}
+            src={logo} alt=""
             />
         </div>
     )
