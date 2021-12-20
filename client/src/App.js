@@ -6,8 +6,10 @@ import Settings from "./pages/settings/Settings";
 import Single from "./pages/single/Single";
 import Write from "./pages/write/Write";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useContext } from "react";
+import { Context } from "./context/Context";
 function App() {
-  const currentUser = false;
+  const {user} = useContext(Context)
   return (
     
     <Router>
@@ -18,15 +20,15 @@ function App() {
       </Route>
       <Route path="/posts" element={<Home/>}>
       </Route>
-      <Route path="/register" element={currentUser ? <Home /> : <Register />}>
+      <Route path="/register" element={user ? <Home /> : <Register />}>
         
       </Route>
-      <Route path="/login" element={currentUser ? <Home /> : <Login />}></Route>
+      <Route path="/login" element={user ? <Home /> : <Login />}></Route>
       <Route path="/post/:id" element={<Single />}>
         
       </Route>
-      <Route path="/write" element={currentUser ? <Write /> : <Login />}></Route>
-      <Route path="/settings" element= {currentUser ? <Settings /> : <Login />}>
+      <Route path="/write" element={user ? <Write /> : <Login />}></Route>
+      <Route path="/settings" element= {user ? <Settings /> : <Login />}>
         </Route>
     </Routes>
   </Router>
