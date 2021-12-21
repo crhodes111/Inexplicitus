@@ -16,7 +16,7 @@
     "start": "nodemon index.js",
     "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
-  "engines":{"node": "14.17.6"},
+  "engines":{"node": "12.x"},
   "author": "",
   "license": "ISC",
   "description": ""
