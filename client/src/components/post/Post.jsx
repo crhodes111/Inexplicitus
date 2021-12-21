@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 
 export default function Post({ post }) {
-  const PF = "localhost:5000/images";
+  
   return (
     <div className="post">
-      {post.photo && <img className="postImg" src={PF + post.photo} alt="" />}
+      {post.photo && <img className="postImg" src={process.env.PUBLIC_URL +"images/" + post.photo} alt="" />}
       <div className="postInfo">
         <div className="postCats">
           {post.categories.map((c) => (
