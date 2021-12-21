@@ -51,5 +51,5 @@ export default function Login() {
         </Link>
       </button>
     </div>
-  );
+  )
 }
