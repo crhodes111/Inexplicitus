@@ -10,3 +10,5 @@ export default function Posts({ posts }) {
     </div>
   );
 }
+
+

@@ -6,6 +6,7 @@ import "./home.css";
 import axios from "axios";
 import { useLocation } from "react-router";
 
+
 export default function Home() {
   const [posts, setPosts] = useState([]);
   const { search } = useLocation();
@@ -19,7 +20,7 @@ export default function Home() {
   }, [search]);
   return (
     <>
-      <Header />
+      <Header posts={posts} />
       <div className="home">
         <Posts posts={posts} />
         <Sidebar />

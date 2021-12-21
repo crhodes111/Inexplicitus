@@ -36,9 +36,7 @@ export default function Sidebar() {
           ))}
         </ul>
       </div>
-      <div className="sidebarItem">
 
-        </div>
-      </div>
+    </div>
   );
 }

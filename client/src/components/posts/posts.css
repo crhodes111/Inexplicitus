@@ -2,5 +2,15 @@
     flex:9;
     display: flex;
     flex-wrap: wrap;
+    margin: 15px;
+    background-color: rgb(196,201 ,182
+    );
+    padding: 5px;
+}
+.posts:nth-child(1){
+    
+    
+    display: flex;
+    flex-wrap: wrap;
     margin: 20px;
 }
