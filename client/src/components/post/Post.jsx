@@ -1,9 +1,9 @@
 import "./post.css";
 import { Link } from "react-router-dom";
-import {imagefolder} from "../../../../images/"
+
 
 export default function Post({ post }) {
-  const PF = imagefolder;
+  const PF = "localhost:5000/images";
   return (
     <div className="post">
       {post.photo && <img className="postImg" src={PF + post.photo} alt="" />}
