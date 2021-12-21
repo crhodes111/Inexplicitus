@@ -15,7 +15,7 @@ app.use(express.json());
 app.use("/images", express.static(path.join(__dirname, "/images")));
 
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../client/build')));
+  app.use(express.static(path.join(__dirname, './client/build')));
 }
 mongoose
   .connect(process.env.MONGO_URI, {
@@ -43,12 +43,6 @@ app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
 app.use("/api/categories", categoryRoute);
-
-
-  app.use(express.static(path.join(__dirname,'cleint', 'build')))
-  app.get('*', (req,res)=>{
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
-  })
 
 
 app.listen(port, () => {
