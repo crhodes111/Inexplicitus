@@ -9,13 +9,13 @@ const PostSchema = new mongoose.Schema({
     desc:{
         type: String,
         required: true,
-        unique: true,
+        
     },
     photo:{
         type:String,
         required: false
     },
-    username: {
+    username:{
         type: String,
         required: true
     },
