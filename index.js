@@ -8,14 +8,14 @@ const postRoute = require("./api/routes/posts");
 const categoryRoute = require("./api/routes/categories");
 const multer = require("multer");
 const path = require("path");
-
+app.use('/', express.static(path.join(__dirname, '/client/build')));
 const port = process.env.PORT || 5000 // Heroku will need the PORT environment variable
 dotenv.config();
 app.use(express.json());
 app.use("/images", express.static(path.join(__dirname, "/images")));
 
 mongoose
-  .connect(process.env.MONGO_URL, {
+  .connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
