@@ -23,8 +23,6 @@ export default function SinglePost() {
     };
     getPost();
   }, [path]);
-console.log(title)
-console.log(desc)
   const handleDelete = async () => {
     try {
       await axios.delete(`api/posts/${post._id}`, {

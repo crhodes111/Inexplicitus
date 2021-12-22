@@ -6,7 +6,7 @@ export default function Post({ post }) {
   
   return (
     <div className="post">
-      {post.photo && <img className="postImg" src={ "https://radiant-brook-74695.herokuapp.com/" + "images/" + post.photo} alt="" />}
+      {post.photo && <img className="postImg" src={"/images/" + post.photo} alt="" />}
       <div className="postInfo">
         <div className="postCats">
           {post.categories.map((c) => (

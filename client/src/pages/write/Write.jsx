@@ -23,11 +23,11 @@ export default function Write() {
       data.append("file", file);
       newPost.photo = filename;
       try {
-        await axios.post("/api/upload", data);
+        await axios.post("/upload", data);
       } catch (err) {}
     }
     try {
-      const res = await axios.post("/api/posts", newPost);
+      const res = await axios.post("api/posts", newPost);
       window.location.replace("/");
     } catch (err) {}
   };
@@ -52,7 +52,7 @@ export default function Write() {
             placeholder="Title"
             className="writeInput"
             autoFocus={true}
-            onChange={e=>setTitle(e.target.value)}
+            onChange={(e)=>setTitle(e.target.value)}
           />
         </div>
         <div className="writeFormGroup">
@@ -60,7 +60,7 @@ export default function Write() {
             placeholder="Tell your story..."
             type="text"
             className="writeInput writeText"
-            onChange={e=>setDesc(e.target.value)}
+            onChange={(e)=>setDesc(e.target.value)}
           ></textarea>
         </div>
         <button className="writeSubmit" type="submit">
