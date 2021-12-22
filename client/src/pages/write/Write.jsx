@@ -16,6 +16,7 @@ export default function Write() {
       title,
       desc,
     };
+    console.log(newPost)
     if (file) {
       const data = new FormData();
       const filename = Date.now() + file.name;
