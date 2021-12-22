@@ -1,12 +1,12 @@
 import "./post.css";
 import { Link } from "react-router-dom";
-
+const PF = "https://radiant-brook-74695.herokuapp.com/images/"
 
 export default function Post({ post }) {
   
   return (
     <div className="post">
-      {post.photo && <img className="postImg" src={"radiant-brook-74695.herokuapp.com/images/" + post.photo} alt="" />}
+      {post.photo && <img className="postImg" src={PF + post.photo}   alt="" />}
       <div className="postInfo">
         <div className="postCats">
           {post.categories.map((c) => (
