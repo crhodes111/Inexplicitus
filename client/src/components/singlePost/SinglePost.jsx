@@ -47,7 +47,7 @@ export default function SinglePost() {
     <div className="singlePost">
       <div className="singlePostWrapper">
         {post.photo && (
-          <img src={"https://radiant-brook-74695.herokuapp.com/" +"images/" + post.photo} alt="" className="singlePostImg" />
+          <img src={`https://radiant-brook-74695.herokuapp.com/images/${post.photo}`} alt="" className="singlePostImg" />
         )}
         {updateMode ? (
           <input
