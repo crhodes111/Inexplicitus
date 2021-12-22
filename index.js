@@ -12,7 +12,7 @@ const path = require("path");
 const port = process.env.PORT || 5000 // Heroku will need the PORT environment variable
 dotenv.config();
 app.use(express.json());
-app.use("/images", express.static(path.join(__dirname, "/images")));
+
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, './client/build')));
